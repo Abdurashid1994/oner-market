@@ -1,0 +1,76 @@
+.tovari{
+padding: 30px 0;
+
+.tovar-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .tovar-card{
+        border: 2px solid $second-color;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+
+        &:hover{
+        box-shadow: 0px 4px 10px 0px #0000001A;
+        cursor: pointer;
+        transform: scale(1.02);
+        transition: 0.4s;
+
+        .tovar-card-text{
+            color: $buttons-color;
+        }
+
+        }
+
+        .tovar-image{
+
+            img{
+                height: 90px;
+                width: 90px;
+                object-fit: cover;
+            }
+        }
+
+        .tovar-card-text{
+            margin-left: 60px;
+
+            p{
+                margin: 15px 0;
+            }
+        }
+
+
+    }
+
+     .last{
+            background-image:  url(../images/tovari/foncs.png) ;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            .tovar-image{
+                img{
+                    object-fit: cover;
+                }
+            }
+
+          p{
+            margin-left: 60px;
+            color: $buttons-color;
+            font-weight: bold;
+          }
+
+          i{
+            margin-left: 25px;
+            font-size: 20px;
+            color: $buttons-color;
+          }
+        }
+
+}
+}
