@@ -1,12 +1,13 @@
 .tovari{
 padding: 30px 0;
 
-.tovar-cards{
+&-cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    .tovar-card{
+    &-card{
         border: 2px solid $second-color;
+        border-radius: 10px;
         background-color: white;
         display: flex;
         align-items: center;
@@ -18,22 +19,22 @@ padding: 30px 0;
         transform: scale(1.02);
         transition: 0.4s;
 
-        .tovar-card-text{
+        .tovari-cards-card-text{
             color: $buttons-color;
         }
 
         }
 
-        .tovar-image{
+        &-image{
 
             img{
-                height: 90px;
-                width: 90px;
+                height: 100%;
+                width: 100%;
                 object-fit: cover;
             }
         }
 
-        .tovar-card-text{
+        &-text{
             margin-left: 60px;
 
             p{
@@ -53,7 +54,7 @@ padding: 30px 0;
             background-size: cover;
 
 
-            .tovar-image{
+           &-image{
                 img{
                     object-fit: cover;
                 }
@@ -72,5 +73,18 @@ padding: 30px 0;
           }
         }
 
+}
+}
+
+@media(min-width: 576px) and (max-width: 768px){
+.tovari{
+    box-shadow: 0px 4px 10px 0px #0000001A;
+    
+    &-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+       
+    }
 }
 }

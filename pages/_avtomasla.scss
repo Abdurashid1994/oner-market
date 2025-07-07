@@ -179,6 +179,10 @@
                 min-height: 250px;
                 overflow: hidden;
 
+                @media(min-width: 576px) and (max-width: 768px){
+                    min-height: 200px;
+                }
+
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.02);
@@ -190,7 +194,14 @@
                     width: 50%;
                     margin: 30px auto auto 20px;
                     line-height: 32px;
+
+                    @media(min-width: 576px) and (max-width: 768px){
+                        width: 70%;
+                        font-size: 18px;
+                    }
                 }
+
+
                 button{
                     position: absolute;
                     top: 40%;
@@ -202,9 +213,18 @@
                     color: white;
                     font-weight: 400;
 
+                    @media(min-width: 576px) and (max-width: 768px){
+                        padding: 4px 7px;
+                        top: 50%;
+                    }
+
 
                     i{
                         margin-left: 10px;
+
+                        @media(min-width: 576px) and (max-width: 768px){
+                            margin-left: 5px;
+                        }
                     }
 
 
@@ -224,6 +244,13 @@
                     position: absolute;
                     top: 80px;
                     right: 10px;
+
+                    @media(min-width: 576px) and (max-width: 768px){
+                        height: 130px;
+                        width: 110px;
+                        right: -10px;
+                        bottom: -35px;
+                    }
                 }
 
                 .bottom-circle{
@@ -234,6 +261,12 @@
                     width: 280px;
                     border-radius: 50%;
                     background-color: #FF9431;
+
+                    @media(min-width: 576px) and (max-width: 768px){
+                        position: absolute;
+                        right: -80%;
+                        top: 40%;
+                    }
                 }
 
             }
@@ -242,4 +275,20 @@
 
     }
 
+}
+
+@media(min-width: 576px) and (max-width: 768px){
+    .avtomasla{
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .avtomasla-card{
+
+                &:nth-child(1) img{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

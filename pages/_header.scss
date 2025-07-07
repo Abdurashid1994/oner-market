@@ -1,17 +1,22 @@
-
-
 .header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 10px #aaa4;
+    z-index: 9;
 
-    .header-up{
+    &-up{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 5px 0;
 
-        .header-up-input{
+        &-input{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -37,7 +42,7 @@
             }
         }
 
-        .header-up-location{
+        &-location{
             display: flex;
             justify-content: space-between;
             width: 140px;
@@ -46,9 +51,11 @@
                 color: $buttons-color;
                 cursor: pointer;
             }
+
+          
         }
 
-        .header-up-numbers{
+        &-numbers{
             display: flex;
             justify-content: space-between;
             width: 150px;
@@ -59,7 +66,7 @@
             }
         }
 
-        .header-up-user{
+        &-user{
             display: flex;
             justify-content: space-between;
             width: 140px;
@@ -69,37 +76,33 @@
                 cursor: pointer;
             }
         }
-
-
-
     }
 
-    .header-line{
+    &-line{
         height: 3px;
         width: 100%;
         background-color: $second-color;
     }
 
 
-    .header-down{
+    &-down{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 8px 0;
+        padding: 12px 0;
 
 
 
-        .katigori{
+        &-katigori{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 130px;
-            background-color: $buttons-color;
             border-radius: 5px;
             padding: 4px 10px;
 
             i{
-                color: white;
+                color: $buttons-color;
+                padding: 4px 10px;
             }
 
             p{
@@ -110,7 +113,18 @@
             }
 
             &:hover{
+                cursor: pointer;
                 transform: scale(1.04);
+                background-color: $buttons-color;
+
+                i{
+                    color: white;
+                }
+                p{
+                    a{
+                        color: white;
+                    }
+                }
             }
         }
 
@@ -137,15 +151,85 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 80px;
+            gap: 5px;
 
             i{
                 color: $buttons-color;
             }
 
+            &:hover{
+                background-color: $buttons-color;
+                color: white;
+                padding: 4px 10px;
+                cursor: pointer;
+                border-radius: 10px;           
+
+                i{
+                    color: white;
+                }
+                p{
+                    a{
+                        color: white;
+                    }
+                }
+            }
+
         }
 
     }
+
+    @media(min-width: 576px) and (max-width: 768px){
+        .header{
+
+            &-up{
+
+                &-location{
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    p{
+                        display: none;
+                    }
+                }
+
+                &-numbers{
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    p{
+                        display: none;
+                    }
+
+                }
+
+                &-user{
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    span{
+                        display: none;
+                    }
+
+                }
+            }
+
+            &-down{
+                display: flex;
+                align-items: center;
+                p{
+                    font-size: 14px;
+                    &:nth-child(n+5):nth-child(-n+7){
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+    
 }
 
 
