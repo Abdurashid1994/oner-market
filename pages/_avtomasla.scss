@@ -1,294 +1,638 @@
-.avtomasla{
-    padding: 30px 0;
-    background-color: white;
+.avtomasla {
+  padding: 30px 0;
+  background-color: white;
 
-    &-header{
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5px;
+
+    h4 {
+      font-weight: 400px;
+      font-size: 24px;
+    }
+
+    button {
+      padding: 10px 14px;
+      background-color: $second-color;
+      border: none;
+      border-radius: 10px;
+      color: $buttons-color;
+      font-weight: 400px;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.04);
+        transition: 0.4s;
+        background-color: $buttons-color;
+        color: white;
+      }
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    &-card {
+      border: 1px solid grey;
+      border-radius: 10px;
+      background-color: white;
+      height: 450px;
+
+      &-bg {
+        background-color: #5946d7;
+        position: relative;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &-tittle {
+          color: white;
+          font-weight: 700;
+          font-size: 24px;
+          padding: 15px;
+          position: absolute;
+          top: 5%;
+        }
+
+        &-circle {
+          height: 400px;
+          width: 400px;
+          border-radius: 50%;
+          background-color: #f8944b;
+          position: absolute;
+          top: 40%;
+          left: -5%;
+        }
+
+        &-images {
+          position: absolute;
+          bottom: -5px;
+          left: 48%;
+
+          &-bg {
+            position: relative;
+
+            img {
+              height: 170px;
+            }
+
+            .first-img {
+              position: absolute;
+              height: 250px;
+              top: -46%;
+              left: -75%;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+        box-shadow: 0px 4px 20px 0px #00000012;
+        transition: 0.4s;
+      }
+
+      &-image {
+        height: 50%;
+        border-radius: 10px 10px 0 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 15px 5px;
+        justify-content: center;
 
-        h4{
-            font-weight: 400px;
-            font-size: 24px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          border-radius: 10px 10px 0 0;
         }
+      }
 
-        button{
-            padding: 10px 14px;
-            background-color: $second-color;
-            border: none;
-            border-radius: 10px;
-            color: $buttons-color;
-            font-weight: 400px;
-            font-size: 14px;
-            cursor: pointer;
+      &-main {
+        height: 50%;
+        padding: 20px 5px;
 
-            &:hover{
-                transform: scale(1.04);
-                transition: 0.4s;
-                background-color: $buttons-color;
-                color: white;
+        &-text {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px 0;
+
+          p {
+            font-size: 12px;
+            margin-left: 5px;
+
+            span {
+              color: grey;
             }
-        }
-    }
+          }
 
-    &-cards{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-
-        
-
-        .avtomasla-card{
-
-            border: 1px solid grey;
-            border-radius: 10px;
-
-
-            &:nth-child(1) img{
-                height: 100%;
-                object-fit: cover;
-            }
-
-
-             &:hover{
-            cursor: pointer;
-            transform: scale(1.01);
-            box-shadow: 0px 4px 20px 0px #00000012;
-            transition: 0.4s;
-
-        }
-
-
-        .avtomasla-card-image{
-            height: 50%;
-            border-radius: 10px 10px 0 0;
+          &-stars {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+
+            i {
+              color: #ff9431;
+
+              &:nth-child(5) {
+                color: grey;
+              }
+            }
+          }
+        }
+
+        p {
+          padding: 10px 0;
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 400;
+        }
+
+        &-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            sup {
+              color: grey;
+              text-decoration-line: line-through;
+            }
+          }
+
+          &-icon {
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+            border: 2px solid $buttons-color;
+            display: flex;
             justify-content: center;
+            align-items: center;
 
-            img{
-                height: 100%;
-                border-radius: 10px 10px 0 0;
+            i {
+              color: $buttons-color;
+              font-size: 20px;
             }
+
+            &:hover {
+              background-color: $buttons-color;
+              transition: 0.4s;
+
+              i {
+                color: white;
+              }
+            }
+          }
         }
-
-
-        .avtomasla-card-main{
-            height: 50%;
-            padding: 10px;
-
-
-
-            .card-image-bottom-text{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 5px 0;
-                
-                p{
-                    font-size: 12px;
-                    margin-left: 5px;
-
-                    span{
-                        color: grey;
-                    }
-
-                }
-               
-                .avtomasla-stars{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    i{
-                        color: #FF9431;
-
-                        &:nth-child(5){
-                            color: grey;
-                        }
-;
-                    }
-
-                    
-                }
-            }
-
-            p{
-                padding: 10px 0;
-                font-size: 16px;
-                line-height: 22px;
-                font-weight: 400;
-            }
-
-            .avtomasla-card-footer{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                p{
-                    sup{
-                        color: grey;
-                        text-decoration-line: line-through;
-                    }
-                }
-
-                .avtomasla-card-footer-icon{
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 10px;
-                    border: 2px solid $buttons-color;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    i{
-                        color: $buttons-color;
-                        font-size: 20px;
-                    }
-
-                    &:hover{
-                        background-color: $buttons-color;
-                        transition: 0.4s;
-
-                        i{
-                            color: white;
-                        }
-                    }
-                }
-               
-            }
-
-        }
-
-        }
-
+      }
     }
+  }
 
-    &-bottom{
-        padding: 30px 0;
+  &-bottom {
+    padding: 30px 0;
 
-        .avtomasla-bottom-cards{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+    &-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
 
-            .bottom-card{
-                background-color: #DEDEE2;
-                position: relative;
-                min-height: 250px;
-                overflow: hidden;
+      &-card {
+        background-color: #dedee2;
+        position: relative;
+        min-height: 250px;
+        overflow: hidden;
 
-                @media(min-width: 576px) and (max-width: 768px){
-                    min-height: 200px;
-                }
+        // @media(min-width: 576px) and (max-width: 768px) {
+        //     min-height: 200px;
+        // }
 
-                &:hover{
-                    cursor: pointer;
-                    transform: scale(1.02);
-                }
-
-                p{
-                    font-weight: 400;
-                    font-size: 24px;
-                    width: 50%;
-                    margin: 30px auto auto 20px;
-                    line-height: 32px;
-
-                    @media(min-width: 576px) and (max-width: 768px){
-                        width: 70%;
-                        font-size: 18px;
-                    }
-                }
-
-
-                button{
-                    position: absolute;
-                    top: 40%;
-                    left: 5%;
-                    padding: 8px 18px;
-                    border-radius: 10px;
-                    border: none;
-                    background-color: #410F9E;
-                    color: white;
-                    font-weight: 400;
-
-                    @media(min-width: 576px) and (max-width: 768px){
-                        padding: 4px 7px;
-                        top: 50%;
-                    }
-
-
-                    i{
-                        margin-left: 10px;
-
-                        @media(min-width: 576px) and (max-width: 768px){
-                            margin-left: 5px;
-                        }
-                    }
-
-
-                    &:hover{
-                        cursor: pointer;
-                        transform: scale(1.02);
-                        background-color: white;
-                        color: $buttons-color;
-                        font-weight: bold;
-                    }
-
-                }
-
-
-
-                img{
-                    position: absolute;
-                    top: 80px;
-                    right: 10px;
-
-                    @media(min-width: 576px) and (max-width: 768px){
-                        height: 130px;
-                        width: 110px;
-                        right: -10px;
-                        bottom: -35px;
-                    }
-                }
-
-                .bottom-circle{
-                    position: absolute;
-                    right: -25%;
-                    top: 30%;
-                    height: 280px;
-                    width: 280px;
-                    border-radius: 50%;
-                    background-color: #FF9431;
-
-                    @media(min-width: 576px) and (max-width: 768px){
-                        position: absolute;
-                        right: -80%;
-                        top: 40%;
-                    }
-                }
-
-            }
-
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.02);
         }
 
-    }
+        p {
+          font-weight: 400;
+          font-size: 24px;
+          width: 50%;
+          margin: 30px auto auto 20px;
+          line-height: 32px;
 
+          // @media(min-width: 576px) and (max-width: 768px) {
+          //     width: 70%;
+          //     font-size: 18px;
+          // }
+        }
+
+        button {
+          position: absolute;
+          top: 40%;
+          left: 5%;
+          padding: 8px 18px;
+          border-radius: 10px;
+          border: none;
+          background-color: #410f9e;
+          color: white;
+          font-weight: 400;
+
+          i {
+            margin-left: 10px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: white;
+            color: $buttons-color;
+            font-weight: bold;
+          }
+        }
+
+        img {
+          position: absolute;
+          top: 80px;
+          right: 10px;
+
+          // @media(min-width: 576px) and (max-width: 768px) {
+          //     height: 130px;
+          //     width: 110px;
+          //     right: -10px;
+          //     bottom: -35px;
+          // }
+        }
+
+        &-circle {
+          position: absolute;
+          right: -25%;
+          top: 30%;
+          height: 280px;
+          width: 280px;
+          border-radius: 50%;
+          background-color: #ff9431;
+
+          // @media(min-width: 576px) and (max-width: 768px) {
+          //     position: absolute;
+          //     right: -80%;
+          //     top: 40%;
+          // }
+        }
+      }
+    }
+  }
 }
 
-@media(min-width: 576px) and (max-width: 768px){
-    .avtomasla{
-        &-cards{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            .avtomasla-card{
-
-                &:nth-child(1) img{
-                    width: 100%;
-                }
+//   avtomasla
+@media (max-width: 1320px) {
+  .avtomasla {
+    &-cards {
+      &-card {
+        &-main {
+          &-text {
+            &-stars {
+              p {
+                display: none;
+              }
             }
+          }
+
+          p {
+            font-size: 16px;
+          }
         }
+      }
     }
+  }
+}
+
+@media (max-width: 1054px) {
+  .avtomasla {
+    &-cards {
+      &-card {
+        &-main {
+          &-text {
+            &-stars {
+            }
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 976px) {
+  .avtomasla {
+    &-cards {
+      gap: 1px;
+
+      &-card {
+        &-bg {
+          &-circle {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-color: #f8944b;
+            position: absolute;
+            top: 55%;
+            left: -5%;
+          }
+
+          &-images {
+            &-bg {
+              img {
+                height: 130px;
+              }
+
+              .first-img {
+                position: absolute;
+                height: 180px;
+                top: -38%;
+              }
+            }
+          }
+
+          &-tittle {
+            font-size: 18px;
+            top: 15%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .avtomasla {
+    &-cards {
+      grid-template-columns: repeat(2, 1fr);
+
+      &-card {
+        &-bg {
+          &-tittle {
+            font-weight: 700;
+            font-size: 24px;
+            padding: 15px;
+            top: 5%;
+          }
+
+          &-circle {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            background-color: #f8944b;
+            position: absolute;
+            top: 40%;
+            left: -5%;
+          }
+
+          &-images {
+            bottom: -5px;
+            left: 48%;
+
+            &-bg {
+              img {
+                height: 170px;
+              }
+
+              .first-img {
+                height: 250px;
+                top: -46%;
+                left: -75%;
+              }
+            }
+          }
+        }
+
+        &-main {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 425px) {
+  .avtomasla {
+    &-cards {
+      grid-template-columns: repeat(1, 1fr);
+
+      &-card {
+        &-bg {
+          &-tittle {
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+            padding: 15px;
+            position: absolute;
+            top: 10%;
+          }
+
+          &-circle {
+            height: 500px;
+            width: 500px;
+            top: 55%;
+            left: 0%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//   bottom
+@media (max-width: 1100px) {
+  .avtomasla {
+    &-bottom {
+      &-cards {
+        &-card {
+          p {
+            font-size: 20px;
+            width: 50%;
+            line-height: 28px;
+          }
+
+          button {
+          }
+
+          &-circle {
+            right: -45%;
+            top: 35%;
+            height: 280px;
+            width: 280px;
+          }
+
+          img {
+            top: 41%;
+            right: -2%;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 905px) {
+  .avtomasla {
+    &-bottom {
+      &-cards {
+        &-card {
+          p {
+            font-size: 20px;
+            width: 50%;
+            line-height: 28px;
+            margin-top: 20px;
+            width: 80%;
+          }
+
+          button {
+            top: 40%;
+            left: 5%;
+            padding: 4px 8px;
+            font-weight: 400;
+          }
+
+          &-circle {
+            right: -60%;
+            top: 50%;
+            height: 280px;
+            width: 280px;
+          }
+
+          img {
+            top: 55%;
+            right: -2%;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .avtomasla {
+    &-bottom {
+      &-cards {
+        gap: 5px;
+
+        &-card {
+          p {
+            font-size: 20px;
+            width: 50%;
+            line-height: 28px;
+            margin-top: 20px;
+            margin-left: 2px;
+            width: 95%;
+          }
+
+          button {
+            top: 40%;
+            left: 5%;
+            padding: 4px 8px;
+            font-weight: 400;
+          }
+
+          &-circle {
+            right: -75%;
+            top: 55%;
+            height: 280px;
+            width: 280px;
+          }
+
+          img {
+            top: 55%;
+            right: -2%;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .avtomasla {
+    &-bottom {
+      &-cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+
+        &-card {
+          p {
+            font-weight: 400;
+            font-size: 24px;
+            width: 50%;
+            margin: 30px auto auto 20px;
+          }
+
+          button {
+            top: 40%;
+            left: 5%;
+            padding: 8px 18px;
+          }
+
+          &-circle {
+            right: -25%;
+            top: 30%;
+            height: 280px;
+            width: 280px;
+          }
+
+          img {
+            top: 80px;
+            right: 10px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 334px) {
+  .avtomasla {
+    &-bottom {
+      &-cards {
+        &-card {
+          p {
+            font-weight: 400;
+            font-size: 24px;
+            width: 50%;
+            margin: 30px auto auto 20px;
+          }
+
+          button {
+            top: 40%;
+            left: 5%;
+            padding: 8px 18px;
+          }
+
+          &-circle {
+            right: -35%;
+            top: 45%;
+            height: 280px;
+            width: 280px;
+          }
+
+          img {
+            top: 40%;
+            right: -2%;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
 }

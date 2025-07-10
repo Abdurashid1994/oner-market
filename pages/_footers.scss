@@ -1,114 +1,186 @@
-.footers{
-    background-color: #2F2B4A;
-    padding: 30px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.footers {
+  background-color: #2f2b4a;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    &-top{
+  &-top {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     padding-bottom: 15px;
 
-   ul{
-
-    li{
+    ul {
+      li {
         list-style: none;
         font-size: 14px;
         line-height: 30px;
 
-        a{
-            text-decoration: none;
-            color: white;
+        a {
+          text-decoration: none;
+          color: white;
         }
+      }
     }
 
-   }
+    h3 {
+      padding: 15px 0;
 
-    h3{
-        padding: 15px 0;
-
-        a{
-            color: white;
-            text-decoration: none;
-        }
-    }
-
-    
-
-    &-consultations{
+      a {
         color: white;
+        text-decoration: none;
+      }
+    }
 
-        .consultation-up{
+    &-consultations {
+      color: white;
+
+      &-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(99, 133, 143, 0.459);
+        padding: 8px;
+        border-radius: 10px;
+        margin-top: 10px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.02);
+          transition: 0.4s;
+        }
+
+        &-text {
+          margin-left: 10px;
+
+          h4 {
+            margin-top: 5px;
+            padding: 2px 0;
+          }
+          p {
+            line-height: normal;
+          }
+        }
+      }
+
+      &-down {
+        display: flex;
+        margin-top: 15px;
+
+        &-circle {
+          .down-circle {
+            margin-top: 5px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: rgba(74, 231, 114, 0.384);
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(99, 133, 143, 0.459);
-            padding: 8px;
-            border-radius: 10px;
-            margin-top: 10px;
-            // color: white;
 
-            &:hover{
-                cursor: pointer;
-                transform: scale(1.02);
-                transition: 0.4s;
+            .down-middle-circle {
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background-color: rgb(2, 241, 2);
             }
-
-            .consultation-up-text{
-                margin-left: 10px;
-                
-                h4{
-                    margin-top: 5px;
-                    padding: 2px 0;
-                }
-                p{
-                    line-height: normal;
-                }
-            }
-
+          }
         }
 
-       .consultation-down{
-
-            display: flex;
-            margin-top: 15px;
-
-
-         .consultation-down-circle{
-            .down-circle{
-                margin-top: 5px;
-                height: 20px;
-                width: 20px;
-                border-radius: 50%;
-                background-color: rgba(74, 231, 114, 0.384);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                .down-middle-circle{
-                    height: 10px;
-                    width: 10px;
-                    border-radius: 50%;
-                    background-color: rgb(2, 241, 2);
-                }
-            }
+        &-text {
+          p {
+            margin-left: 10px;
+          }
         }
+      }
 
-        .consultation-down-text{
-            p{
-                margin-left: 10px;
-            }
+      //    max width 425 bo'lganda ciqadi
+      &-last-text {
+        margin-top: 15px;
+        display: none;
+      }
+    }
+  }
+
+  // 990 px responsiveda korinadi
+  .footer-top-consultations {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 10px auto 25px auto;
+
+    .consultations-up {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(99, 133, 143, 0.459);
+      padding: 8px;
+      border-radius: 10px;
+      margin-right: 10%;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        transition: 0.4s;
+      }
+
+      &-text {
+        margin-left: 10px;
+
+        h4 {
+          margin-top: 5px;
+          padding: 2px 0;
         }
-
-       }
+        p {
+          line-height: normal;
+        }
+      }
     }
 
-}
+    .consultations-down {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
 
-&-bottom{
+      &-circle {
+        .down-circle {
+          margin-top: 5px;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          background-color: rgba(74, 231, 114, 0.384);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .down-middle-circle {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: rgb(2, 241, 2);
+          }
+        }
+      }
+
+      &-text {
+        p {
+          margin-left: 10px;
+          width: 50%;
+          line-height: 25px;
+        }
+      }
+    }
+
+    &-lasttext {
+      word-spacing: 65px;
+    }
+
+    display: none;
+  }
+
+  &-bottom {
     padding: 15px 0;
     color: white;
     border-top: 1px solid gray;
@@ -116,62 +188,147 @@
     align-items: center;
     justify-content: space-between;
 
-    @media(min-width: 576px) and (max-width: 768px){
-        padding: 10px 0;
+    // @media(min-width: 576px) and (max-width: 768px){
+    //     padding: 10px 0;
 
-        p{
-            font-size: 14px;
-        }
+    //     p{
+    //         font-size: 14px;
+    //     }
+    // }
+
+    &-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 30%;
+
+      // @media(min-width: 576px) and (max-width: 768px){
+      //     width: 40%;
+      // }
+
+      i {
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+      }
     }
 
-    &-icons{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 30%;
+    &-last-text {
+      word-spacing: 15px;
 
-        @media(min-width: 576px) and (max-width: 768px){
-            width: 40%;
-        }
-
-        i{
-            font-size: 26px;
-            color: white;
-            cursor: pointer;
-        }
+      // @media(min-width: 576px) and (max-width: 768px){
+      //     display: none;
+      // }
     }
-
-    &-last-text{
-        word-spacing: 15px;
-
-        @media(min-width: 576px) and (max-width: 768px){
-            display: none;
-        }
-    }
-    
+  }
 }
 
+@media (max-width: 1061px) {
+  .footers {
+    &-top {
+      gap: 5px;
+      p {
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
 
-@media(min-width: 576px) and (max-width: 768px){
+@media (max-width: 990px) {
+  .footers {
+    &-top {
+      grid-template-columns: repeat(4, 1fr);
 
-    .footers{
-
-        &-top{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
-            ul{
-                li{
-                    font-size: 12px;
-                    line-height: 20px;
-                }
-            }
-        }
-
-        .footers-top-consultations{
-            display: none;
-        }
-
+      &-consultations {
+        display: none;
+      }
     }
+
+    .footer-top-consultations {
+      display: flex;
+    }
+
+    &-bottom {
+      &-last-text {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footers {
+    &-top {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .footers {
+    .footer-top-consultations {
+      &-lasttext {
+        display: none;
+      }
+    }
+
+    &-bottom {
+      p {
+        width: 50%;
+      }
+
+      &-icons {
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 425px) {
+  .footers {
+    &-top {
+      grid-template-columns: repeat(1, 1fr);
+
+      &-consultations {
+        display: block;
+
+        &-up {
+          padding: 25px 0;
+        }
+
+        &-down {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 0;
+        }
+
+        &-last-text {
+          display: block;
+          text-align: center;
+          word-spacing: 25px;
+        }
+      }
+    }
+
+    .footer-top-consultations {
+      display: none;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        width: 100%;
+        padding: 20px 0;
+      }
+    }
+  }
 }

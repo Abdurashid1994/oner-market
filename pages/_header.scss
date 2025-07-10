@@ -1,235 +1,426 @@
-.header{
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 1px 1px 10px #aaa4;
+  z-index: 9;
+
+  &-up {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 1px 1px 10px #aaa4;
-    z-index: 9;
+    padding: 5px 0;
 
-    &-up{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px 0;
+    &-menu {
+      i {
+        color: $buttons-color;
+        font-size: 18px;
+      }
 
-        &-input{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 250px;
-            border: none;
-            background-color: $second-color;
-            border-radius: 10px;
-            padding: 5px 10px;
-
-            input{
-            padding: 0 5px 0;
-            flex: 1;
-            font-size: 12px;
-            border: none;
-            outline: none;
-            color: $buttons-color;
-            background-color: $second-color;
-            }
-
-            i{
-                color: $buttons-color;
-                cursor: pointer;
-            }
-        }
-
-        &-location{
-            display: flex;
-            justify-content: space-between;
-            width: 140px;
-
-            i{
-                color: $buttons-color;
-                cursor: pointer;
-            }
-
-          
-        }
-
-        &-numbers{
-            display: flex;
-            justify-content: space-between;
-            width: 150px;
-
-            i{
-                color: $buttons-color;
-                cursor: pointer;
-            }
-        }
-
-        &-user{
-            display: flex;
-            justify-content: space-between;
-            width: 140px;
-
-            i{
-                color: $buttons-color;
-                cursor: pointer;
-            }
-        }
+      display: none;
     }
 
-    &-line{
-        height: 3px;
-        width: 100%;
+    &-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 250px;
+      border: none;
+      background-color: $second-color;
+      border-radius: 10px;
+      padding: 5px 10px;
+
+      input {
+        padding: 0 5px 0;
+        flex: 1;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        color: $buttons-color;
         background-color: $second-color;
+      }
+
+      i {
+        color: $buttons-color;
+        cursor: pointer;
+      }
     }
 
+    &-location {
+      display: flex;
+      justify-content: space-between;
+      width: 140px;
 
-    &-down{
+      i {
+        color: $buttons-color;
+        cursor: pointer;
+      }
+    }
+
+    &-numbers {
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+
+      i {
+        color: $buttons-color;
+        cursor: pointer;
+      }
+    }
+
+    &-user {
+      display: flex;
+      justify-content: space-between;
+      width: 140px;
+
+      i {
+        color: $buttons-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &-up {
+      &-location {
+        width: auto;
+
+        p {
+          font-size: 14px;
+          margin-left: 5px;
+        }
+      }
+
+      &-numbers {
+        width: auto;
+
+        p {
+          font-size: 14px;
+          margin-left: 5px;
+        }
+      }
+
+      &-user {
+        width: auto;
+
+        span {
+          font-size: 14px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 970px) {
+    &-up {
+      p {
+        font-size: 12px;
+      }
+
+      img {
+        width: 130px;
+      }
+
+      &-input {
+        width: 160px;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-up {
+      img {
+        width: 140px;
+      }
+
+      &-input {
+        width: 160px;
+
+        input {
+          width: 100%;
+        }
+      }
+
+      &-location {
+        width: auto;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 0;
+        justify-content: center;
 
+        p {
+          display: none;
+        }
+      }
 
+      &-numbers {
+        width: auto;
+        display: flex;
+        justify-content: center;
 
-        &-katigori{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 5px;
-            padding: 4px 10px;
+        p {
+          display: none;
+        }
+      }
 
-            i{
-                color: $buttons-color;
-                padding: 4px 10px;
-            }
+      &-user {
+        width: auto;
+        display: flex;
+        justify-content: center;
 
-            p{
-                a{
-                    color: white;
-                    text-decoration: none;
-                }
-            }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
 
-            &:hover{
-                cursor: pointer;
-                transform: scale(1.04);
-                background-color: $buttons-color;
+  @media (min-width: 220px) and (max-width: 576px) {
+    &-up {
+      &-menu {
+        display: block;
+      }
 
-                i{
-                    color: white;
-                }
-                p{
-                    a{
-                        color: white;
-                    }
-                }
-            }
+      img {
+        width: 130px;
+      }
+
+      &-input {
+        display: none;
+      }
+
+      &-location {
+        width: auto;
+        display: flex;
+        justify-content: center;
+
+        p {
+          display: none;
+        }
+      }
+
+      &-numbers {
+        width: auto;
+        display: flex;
+        justify-content: center;
+
+        p {
+          display: none;
+        }
+      }
+
+      &-user {
+        width: auto;
+        display: flex;
+        justify-content: center;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-line {
+    height: 3px;
+    width: 100%;
+    background-color: $second-color;
+  }
+
+  &-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+
+    &-katigori {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5px;
+      padding: 4px 10px;
+      border: 1px solid $buttons-color;
+
+      i {
+        color: $buttons-color;
+        padding: 4px 10px;
+      }
+
+      p {
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+        background-color: $buttons-color;
+
+        i {
+          color: white;
         }
 
-        p{
-            &:hover{
-                background-color: $buttons-color;
-                border-radius: 5px;
-                transition: 0.4s;
-                transform: scale(1.04);
-
-                a{
-                    color: white;
-                }
-
-            }
-
-            a{
-                text-decoration: none;
-                color: black;
-            }
+        p {
+          a {
+            color: white;
+          }
         }
-
-        .karzina{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 5px;
-
-            i{
-                color: $buttons-color;
-            }
-
-            &:hover{
-                background-color: $buttons-color;
-                color: white;
-                padding: 4px 10px;
-                cursor: pointer;
-                border-radius: 10px;           
-
-                i{
-                    color: white;
-                }
-                p{
-                    a{
-                        color: white;
-                    }
-                }
-            }
-
-        }
-
+      }
     }
 
-    @media(min-width: 576px) and (max-width: 768px){
-        .header{
+    &-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 250px;
+      border: none;
+      background-color: $second-color;
+      border-radius: 10px;
+      padding: 5px 10px;
 
-            &-up{
+      input {
+        padding: 0 5px 0;
+        flex: 1;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        color: $buttons-color;
+        background-color: $second-color;
+      }
 
-                &-location{
-                    width: auto;
-                    display: flex;
-                    justify-content: center;
+      i {
+        color: $buttons-color;
+        cursor: pointer;
+      }
 
-                    p{
-                        display: none;
-                    }
-                }
-
-                &-numbers{
-                    width: auto;
-                    display: flex;
-                    justify-content: center;
-
-                    p{
-                        display: none;
-                    }
-
-                }
-
-                &-user{
-                    width: auto;
-                    display: flex;
-                    justify-content: center;
-
-                    span{
-                        display: none;
-                    }
-
-                }
-            }
-
-            &-down{
-                display: flex;
-                align-items: center;
-                p{
-                    font-size: 14px;
-                    &:nth-child(n+5):nth-child(-n+7){
-                        display: none;
-                    }
-                }
-            }
-
-        }
+      display: none;
     }
-    
+
+    p {
+      &:hover {
+        background-color: $buttons-color;
+        border-radius: 5px;
+        transition: 0.4s;
+        transform: scale(1.04);
+
+        a {
+          color: white;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .karzina {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+
+      i {
+        color: $buttons-color;
+      }
+
+      &:hover {
+        background-color: $buttons-color;
+        color: white;
+        padding: 4px 10px;
+        cursor: pointer;
+        border-radius: 10px;
+
+        i {
+          color: white;
+        }
+
+        p {
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1175px) {
+    .header {
+      &-down {
+        p {
+          font-size: 14px;
+          // &:nth-child(n+5):nth-child(-n+7){
+          //     display: none;
+          // }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .header {
+      &-down {
+        p {
+          font-size: 14px;
+
+          &:nth-child(n + 5):nth-child(-n + 7) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .header {
+      &-down {
+        &-input {
+          display: flex;
+        }
+
+        p {
+          display: none;
+        }
+
+        &-katigori {
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 300px) and (max-width: 440px) {
+    .header {
+      &-down {
+        &-katigori {
+          padding: 1px 3px;
+        }
+
+        &-input {
+          width: 140px;
+
+          input {
+            width: 100%;
+          }
+        }
+
+        .karzina {
+          i {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
-
-

@@ -158,39 +158,144 @@
    
 }
 
-@media(min-width: 576px) and (max-width: 768px){
+
+@media(max-width: 985px){
     .taklif{
         &-cards{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1px;
+            gap: 5px;
+            &-card{
+                &-main{
+                   &-text{
+                    &-stars{
+                        p{
+                            display: none;
+                        }
+                    }
+                   } 
+                   p{
+                    font-size: 16px;
+                   }
+                }
+            }
+        }
+    }
+}
 
+@media(max-width: 817px){
+    .taklif{
+        &-cards{
+            &-card{
+                &-main{
+                   &-text{
+                    &-stars{
+                        span{
+                            display: none;
+                        }
+                    }
+                   } 
+                   p{
+                    font-size: 12px;
+                   }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 768px){
+    .taklif{
+        &-cards{
+            grid-template-columns: repeat(2, 1fr);
             &-icon{
                 display: none;
             }
-
             &-card{
-                width: 100%;
+                &-bg{
+                   
+                    &-tittle{
 
-                 &-image{
-                    img{
-                        width: 100%;
+                    font-weight: 700;
+                    font-size: 24px;
+                    padding: 15px;
+                    top: 5%;
+                }
+                    
+                    &-circle{
+
+                    height: 400px;
+                    width: 400px;
+                    border-radius: 50%;
+                    background-color: #F8944B;
+                    position: absolute;
+                    top: 40%;
+                    left: -5%;
+
                     }
+
+                     &-images{
+                    bottom: -5px;
+                    left: 48%;
+
+                    &-bg{
+
+                    img{
+                        height: 170px;
+                    }
+
+                        .first-img{
+                        height: 250px;
+                        top: -46%;
+                        left: -75%;
+                    }
+                    }
+                    
+                }
                 }
 
-                 p{
+                 &-main {
+
+                p {
                     font-size: 16px;
                 }
 
-                &-main{
-                    height: auto;
-
-                    &-text{
-                        
-                    }
                 }
 
-             }
+            }
+
+            }
         }
     }
+
+@media(min-width: 300px) and (max-width: 425px){
+.taklif{
+    &-cards{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+
+        &-card{
+            &-bg{
+
+                 &-tittle{
+                    color: white;
+                    font-weight: 700;
+                    font-size: 24px;
+                    padding: 15px;
+                    position: absolute;
+                    top: 10%;
+                }
+
+                &-circle{
+                    height: 500px;
+                    width: 500px;
+                    top: 55%;
+                    left: 0%;
+
+                }
+
+            }
+        }
+    }
+}
 }

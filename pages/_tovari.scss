@@ -76,7 +76,7 @@ padding: 30px 0;
 }
 }
 
-@media(min-width: 576px) and (max-width: 768px){
+@media(min-width: 576px) and (max-width: 860px){
 .tovari{
     box-shadow: 0px 4px 10px 0px #0000001A;
     
@@ -87,4 +87,52 @@ padding: 30px 0;
        
     }
 }
+}
+
+@media(min-width: 300px) and (max-width: 576px){
+    .tovari{
+        &-cards{
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+
+            &-card{
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: flex-start;
+                padding: 5px 10px; 
+
+                &-text{
+                    margin: 0;
+                    p{
+                        margin: 5px 0;
+                    }
+                }
+            }
+
+            .last{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 5px 10px;
+
+                 p{
+            margin-left: 0;
+            color: $buttons-color;
+            font-size: 14px;
+            padding: 5px 0;
+                
+          }
+
+          i{
+            margin-left: calc(100% - 35px);
+            font-size: 15px;
+            color: $buttons-color;
+          }
+
+            }
+        }
+    }
 }
