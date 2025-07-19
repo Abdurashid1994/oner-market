@@ -15,6 +15,49 @@
   }
 }
 
+.btn {
+  padding: 10px 0;
+  background-color: #FF9431;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 22px;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: 0.5s;
+}
+
+.inp {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #6B59CC;
+  outline: transparent;
+  color: #6B59CC;
+  font-weight: 600;
+}
+
+.active {
+  display: flex;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.how:hover {
+  background-color: red;
+}
+
+.hiddenColor {
+  background-color: transparent;
+}
+
+.bacColor {
+  background-color: #FF9431;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -37,7 +80,7 @@
   display: none;
 }
 .header-up-menu i {
-  color: #6B59CC;
+  color: #FF9431;
   font-size: 18px;
 }
 .header-up-input {
@@ -56,11 +99,11 @@
   font-size: 12px;
   border: none;
   outline: none;
-  color: #6B59CC;
+  color: #FF9431;
   background-color: #d4e3f3;
 }
 .header-up-input i {
-  color: #6B59CC;
+  color: #FF9431;
   cursor: pointer;
 }
 .header-up-location {
@@ -69,7 +112,7 @@
   width: 140px;
 }
 .header-up-location i {
-  color: #6B59CC;
+  color: #FF9431;
   cursor: pointer;
 }
 .header-up-numbers {
@@ -78,7 +121,7 @@
   width: 150px;
 }
 .header-up-numbers i {
-  color: #6B59CC;
+  color: #FF9431;
   cursor: pointer;
 }
 .header-up-user {
@@ -87,7 +130,7 @@
   width: 140px;
 }
 .header-up-user i {
-  color: #6B59CC;
+  color: #FF9431;
   cursor: pointer;
 }
 @media (max-width: 1100px) {
@@ -214,10 +257,10 @@
   align-items: center;
   border-radius: 5px;
   padding: 4px 10px;
-  border: 1px solid #6B59CC;
+  border: 1px solid #FF9431;
 }
 .header-down-katigori i {
-  color: #6B59CC;
+  color: #FF9431;
   padding: 4px 10px;
 }
 .header-down-katigori p a {
@@ -227,7 +270,7 @@
 .header-down-katigori:hover {
   cursor: pointer;
   transform: scale(1.04);
-  background-color: #6B59CC;
+  background-color: #FF9431;
 }
 .header-down-katigori:hover i {
   color: white;
@@ -252,15 +295,15 @@
   font-size: 12px;
   border: none;
   outline: none;
-  color: #6B59CC;
+  color: #FF9431;
   background-color: #d4e3f3;
 }
 .header-down-input i {
-  color: #6B59CC;
+  color: #FF9431;
   cursor: pointer;
 }
 .header-down p:hover {
-  background-color: #6B59CC;
+  background-color: #FF9431;
   border-radius: 5px;
   transition: 0.4s;
   transform: scale(1.04);
@@ -279,10 +322,10 @@
   gap: 5px;
 }
 .header-down .karzina i {
-  color: #6B59CC;
+  color: #FF9431;
 }
 .header-down .karzina:hover {
-  background-color: #6B59CC;
+  background-color: #FF9431;
   color: white;
   padding: 4px 10px;
   cursor: pointer;
@@ -391,7 +434,7 @@
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.4s;
-  background-color: #6B59CC;
+  background-color: #FF9431;
 }
 .banner2-bg-icons {
   display: flex;
@@ -402,7 +445,7 @@
   height: 30px;
   width: 40px;
   background-color: white;
-  color: #6B59CC;
+  color: #FF9431;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -421,7 +464,7 @@
 }
 .banner2-bg-icons-icon:hover {
   cursor: pointer;
-  background-color: #6B59CC;
+  background-color: #FF9431;
   color: white;
   transition: 0.4s;
   transform: scale(1.02);
@@ -479,7 +522,7 @@
     padding: 20px 0 20px 15px;
   }
   .banner1-bg-sides-texts-tittle {
-    color: #6B59CC;
+    color: #FF9431;
     font-weight: 600;
     font-size: 20px;
     line-height: 40px;
@@ -538,7 +581,7 @@
     border-radius: 10px;
   }
   .banner1-bg-lines-line:hover {
-    background-color: #6B59CC;
+    background-color: #FF9431;
     cursor: pointer;
     transform: scale(1.1);
     transition: 0.5s;
@@ -567,7 +610,7 @@
   }
   .banner1-bg-icons-icon:hover {
     background-color: white;
-    color: #6B59CC;
+    color: #FF9431;
     cursor: pointer;
     transform: scale(1.03);
     transition: 0.5s;
@@ -738,7 +781,7 @@
   transition: 0.4s;
 }
 .tovari-cards-card:hover .tovari-cards-card-text {
-  color: #6B59CC;
+  color: #FF9431;
 }
 .tovari-cards-card-image img {
   height: 100%;
@@ -766,13 +809,13 @@
 }
 .tovari-cards .last p {
   margin-left: 60px;
-  color: #6B59CC;
+  color: #FF9431;
   font-weight: bold;
 }
 .tovari-cards .last i {
   margin-left: 25px;
   font-size: 20px;
-  color: #6B59CC;
+  color: #FF9431;
 }
 
 @media (min-width: 576px) and (max-width: 860px) {
@@ -810,14 +853,14 @@
   }
   .tovari-cards .last p {
     margin-left: 0;
-    color: #6B59CC;
+    color: #FF9431;
     font-size: 14px;
     padding: 5px 0;
   }
   .tovari-cards .last i {
     margin-left: calc(100% - 35px);
     font-size: 15px;
-    color: #6B59CC;
+    color: #FF9431;
   }
 }
 .avtomasla {
@@ -839,7 +882,7 @@
   background-color: #d4e3f3;
   border: none;
   border-radius: 10px;
-  color: #6B59CC;
+  color: #FF9431;
   font-weight: 400px;
   font-size: 14px;
   cursor: pointer;
@@ -847,7 +890,7 @@
 .avtomasla-header button:hover {
   transform: scale(1.04);
   transition: 0.4s;
-  background-color: #6B59CC;
+  background-color: #FF9431;
   color: white;
 }
 .avtomasla-cards {
@@ -969,17 +1012,17 @@
   height: 40px;
   width: 40px;
   border-radius: 10px;
-  border: 2px solid #6B59CC;
+  border: 2px solid #FF9431;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .avtomasla-cards-card-main-footer-icon i {
-  color: #6B59CC;
+  color: #FF9431;
   font-size: 20px;
 }
 .avtomasla-cards-card-main-footer-icon:hover {
-  background-color: #6B59CC;
+  background-color: #FF9431;
   transition: 0.4s;
 }
 .avtomasla-cards-card-main-footer-icon:hover i {
@@ -1028,7 +1071,7 @@
   cursor: pointer;
   transform: scale(1.02);
   background-color: white;
-  color: #6B59CC;
+  color: #FF9431;
   font-weight: bold;
 }
 .avtomasla-bottom-cards-card img {
@@ -1351,17 +1394,17 @@
   height: 40px;
   width: 40px;
   border-radius: 10px;
-  border: 2px solid #6B59CC;
+  border: 2px solid #FF9431;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .taklif-cards-card-main-footer-icon i {
-  color: #6B59CC;
+  color: #FF9431;
   font-size: 20px;
 }
 .taklif-cards-card-main-footer-icon:hover {
-  background-color: #6B59CC;
+  background-color: #FF9431;
   transition: 0.4s;
 }
 .taklif-cards-card-main-footer-icon:hover i {
@@ -1373,7 +1416,7 @@
   width: 45px;
   border-radius: 5px;
   background-color: white;
-  color: #6B59CC;
+  color: #FF9431;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1381,7 +1424,7 @@
   top: 48%;
 }
 .taklif-cards-icon:hover {
-  background-color: #6B59CC;
+  background-color: #FF9431;
   color: white;
   cursor: pointer;
 }
@@ -1464,7 +1507,7 @@
   }
 }
 .footers {
-  background-color: #2F2B4A;
+  background-color: #2f2b4a;
   padding: 30px 10px;
   display: flex;
   flex-direction: column;
@@ -1701,5 +1744,114 @@
   .footers-bottom p {
     width: 100%;
     padding: 20px 0;
+  }
+}
+.f-bg {
+  background-image: url(../images/natureTree.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.f-bg .malumot {
+  position: absolute;
+  bottom: 15px;
+  font-weight: 800;
+  color: white;
+}
+.f-bg-content {
+  width: 350px;
+  background-color: rgba(212, 227, 243, 0.2666666667);
+  border-radius: 10px;
+}
+.f-bg-content-header {
+  display: flex;
+  align-items: center;
+}
+.f-bg-content-header h3 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-bg-content-header h3:nth-child(1) {
+  border-radius: 10px 0 0 0;
+}
+.f-bg-content-header h3:nth-child(3) {
+  border-radius: 0 10px 0 0;
+}
+.f-bg-content-header-line {
+  width: 2px;
+}
+.f-bg-content-forma-in {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 95%;
+}
+.f-bg-content-forma-in input {
+  width: 100%;
+  margin-top: 15px;
+}
+.f-bg-content-forma-new {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 95%;
+}
+.f-bg-content-forma-new input {
+  width: 100%;
+  margin-top: 15px;
+}
+.f-bg-content-forma-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+.f-bg-content-forma-footer button {
+  width: 70%;
+  border: transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 350px) {
+  .f-bg-content {
+    width: 300px;
+  }
+  .f-bg-content-forma-footer button {
+    padding: 7px 0;
+    font-weight: 400;
+  }
+}
+@media (max-width: 273px) {
+  .f-bg-content {
+    width: 200px;
+  }
+  .f-bg-content-header h3 {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .f-bg-content-forma-footer button {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+@media (max-width: 273px) {
+  .f-bg-content {
+    width: 150px;
+  }
+  .f-bg-content-header h3 {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .f-bg-content-forma-footer button {
+    font-weight: 400;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -20,4 +20,53 @@ $second-color: #d4e3f3;
 $buttons-color: #6B59CC;
 
 
+$blu-color: #6B59CC;
+$buttons-color: #FF9431;
+$bac-color: #d4e3f344; 
+
+
+.btn {
+    padding: 10px 0;
+    background-color: $buttons-color;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 22px;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: 0.5s;
+    }
+}
+
+.inp {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid $blu-color;
+    outline: transparent;
+    // text-transform: capitalize;
+    color: $blu-color;
+    font-weight: 600;
+}
+
+.active{
+    display: flex;
+}
+
+.hidden{
+    display: none !important
+}
+
+.how:hover{
+    background-color: red;
+}
+
+.hiddenColor{
+    background-color: transparent;
+}
+
+.bacColor{
+    background-color: $buttons-color;
+}
 
