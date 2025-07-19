@@ -37,17 +37,33 @@ headerSign.addEventListener("click", ()=>{
 })
 
 
+    const usLogin = document.forma.usLogin
+    const usPassword = document.forma.usPassword
+    
 
-const users = ["mylogin", "4320"]
+
+fNew.addEventListener("click", (e)=>{
+    e.preventDefault()
+    headerNew.classList.remove("hiddenColor")
+    headerSign.classList.add("hiddenColor")
+    formNew.classList.add("hidden")
+    formInn.classList.remove("hidden")
+    fNew.classList.add("hidden")   
+    fLogin.classList.remove("hidden") 
+})
+
+
+
 
 function checkLogin (e){
      e.preventDefault();
     let userLogin = document.forma.formaLogin
     let userPass = document.forma.formaPassword
-    if(userLogin.value === users[0] && userPass.value === users[1]){
+    if(userLogin.value === usLogin.value && userPass.value === usPassword.value){
         wrap.classList.remove("hidden")
         bg.classList.add("hidden")
     }else{
+        
         alert("Login yoki parol xato");
     }
 }
