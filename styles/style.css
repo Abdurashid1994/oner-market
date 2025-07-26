@@ -58,6 +58,24 @@
   background-color: #FF9431;
 }
 
+.borderColorGreen {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid greenyellow;
+  outline: transparent;
+  color: #6B59CC;
+  font-weight: 600;
+}
+
+.borderColorRed {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid red;
+  outline: transparent;
+  color: #6B59CC;
+  font-weight: 600;
+}
+
 .header {
   display: flex;
   flex-direction: column;

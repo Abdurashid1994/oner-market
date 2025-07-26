@@ -70,3 +70,22 @@ $bac-color: #d4e3f344;
     background-color: $buttons-color;
 }
 
+
+.borderColorGreen{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid greenyellow;
+    outline: transparent;
+    color: $blu-color;
+    font-weight: 600;
+}
+
+.borderColorRed{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid red;
+    outline: transparent;
+    color: $blu-color;
+    font-weight: 600;
+    
+}
